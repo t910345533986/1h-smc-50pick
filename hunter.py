@@ -147,7 +147,8 @@ class BingXStructureHunterV37_CloudFix:
 
 if __name__ == "__main__":
     hunter = BingXStructureHunterV37_CloudFix()
-    if hunter.get_bingx_symbols(100):
+    # 這裡已修改為 500
+    if hunter.get_bingx_symbols(500):
         print("🔍 掃描中...")
         for s in tqdm(hunter.targets):
             df, status = hunter.fetch_data_bingx(s, '1h', 500)
